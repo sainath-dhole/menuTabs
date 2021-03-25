@@ -1,0 +1,161 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--<ion-content fullscreen class="ion-padding">
+  <div class="homePageFeedContainer">
+    <div class=".f-topnav-ctn">
+      <div class="feed-card">
+        <div class="f-topNav">
+  <div class="slider.size">
+    <ion-slides class="ion-padding">
+      
+      
+        <ion-slide class="slide-size">
+          <a href="../menu/second">
+          <img src="../assets/women.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+          </a>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+
+      
+        <ion-slide class="slide-size">
+          <img src="../assets/men.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;"/>
+        </ion-slide>
+      
+            
+    </ion-slides>
+    </div></div></div>
+  </div>
+
+  <ion-card>
+    <img src="../assets/2.jpg" class="img-responsive preLoad loaded" alt="" title="" style="width: 100%;">
+  </ion-card>
+</div>
+</ion-content>-->
+
+<ion-content>
+  <!--<div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your Product"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>-->
+
+ <!-- <div class="title ion-padding">
+    <h2 class="font-bold">Categories</h2>
+    <p>See all</p>
+  </div>
+
+  <div class="category-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let category of categories">
+        <ion-col>
+          <h4>{{ category.name }}</h4>
+          <img src="{{ category.image }}" />
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>-->
+
+  <section>
+    <div class="image-border">
+      <div class="border-height"></div>
+      <div class="border-design">
+        <img src="../assets/poster-2.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!--<div class="title ion-padding">
+    <h2 class="font-bold">Offers</h2>
+    <p>See all</p>
+  </div>-->
+
+  <div class="offer-slider ion-padding">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let offer of offers">
+        <ion-col>
+         
+          <!--<h4>{{ category.name }}</h4>-->
+          <img src="{{ offer.image }}" />
+        
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!--<div class="title ion-padding">
+    <h2 class="font-bold">Best Selling</h2>
+    <p>See all</p>
+  </div>-->
+
+  <!--<div class="product-slider ion-padding">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      
+      <ion-slide *ngFor="let product of bestSellProducts">
+       
+        <ion-col>
+          <img src="{{ product.image }}" />
+          <p>₹{{ product.price }}</p>
+          <h6>{{ product.name }}</h6>
+        </ion-col>
+      
+      </ion-slide>
+    
+    </ion-slides>
+  </div>-->
+
+  <ion-grid>
+    <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="6" *ngFor="let product of bestSellProducts">
+    
+     
+      <img src="{{ product.image }}" class="ion-img" />
+      <h6 style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center; color:#632d2d ; font-weight: bold;">{{ product.name }}</h6>
+    
+  </ion-col>
+</ion-row>
+  </ion-grid>
+  
+
+</ion-content>
+

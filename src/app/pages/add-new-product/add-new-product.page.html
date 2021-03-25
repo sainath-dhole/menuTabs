@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-button fill="clear" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-button>
+    <ion-buttons fill="clear" slot="end">
+      <ion-back-button defaultHref="/menu/first/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add New Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <!--<ion-card class="ion-text-center ion-img" *ngIf="!isUploading && !isUploaded">
+    <ion-card-header>
+      <ion-card-title style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center; color:grey ; font-weight: bold;">Choose Images to Upload</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button color="medium" shape="round">
+        <span style="font-family:Verdana, Geneva, Tahoma, sans-serif">Select Image</span>
+        <input id="uploadBtn" type="file" class="upload" (change)="uploadFile($event.target.files)" />
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center" *ngIf="isUploading && !isUploaded">
+    <ion-card-header>
+      <ion-card-title>Selected File:<b>{{ fileName }}</b></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div *ngIf="percentage | async as pct">
+        Progress: {{ pct | number }}%
+        <ion-progress-bar value="{{ pct / 100 }}"></ion-progress-bar>
+      </div>
+      <div *ngIf="snapshot | async as snap">
+        File Size: {{ snap.totalBytes | fileSizePipe }} Transfered:
+        {{ snap.bytesTransferred | fileSizePipe }}
+        <div *ngIf="snapshot && snap.bytesTransferred != snap.totalBytes">
+          <ion-button color="warning" size="small" (click)="task.pause()" class="button is-warning">Pause</ion-button>
+          <ion-button size="small" (click)="task.resume()" class="button is-info">Resume</ion-button>
+          <ion-button color="danger" size="small" (click)="task.cancel()" class="button is-danger">Cancel</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="ion-text-center" *ngIf="!isUploading && isUploaded">
+    <ion-card-header>
+      <ion-card-title>
+        <b>{{ fileName }}</b> Uploaded!
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div *ngIf="UploadedFileURL | async as url">
+        <img [src]="url" />
+        <a [href]="url" target="_blank" rel="noopener">Download</a>
+      </div>
+      File Size: {{ fileSize | fileSizePipe }}
+      <ion-button expand="full" color="success" (click)="isUploading = isUploaded = false">Upload More</ion-button>
+    </ion-card-content>
+  </ion-card>-->
+  <ion-item  class="ion-activated">
+    <ion-label style="font-family:Verdana, Geneva, Tahoma, sans-serif; align-items: center; font-weight: bolder; font-size: large; color: rgb(112, 67, 67);">
+      Welcome To Seller Portal...!
+    </ion-label>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+    <ion-col sizeLg="6" sizeMd="6">
+    <ion-card style=" box-shadow: 0px 15px 20px 0px rgb(71, 70, 70); margin-bottom:30px">
+      <ion-item routerLink="/menu/upload" class="ion-activated" style="text-align: center;">
+        <ion-label style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+          Add New Product
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card style=" box-shadow: 0px 15px 20px 0px rgb(71, 70, 70)">
+      <ion-item routerLink="/menu/first/view-products" style="text-align: center;">
+        <ion-label style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+          View My Products
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+
+    </ion-card>
+    
+  </ion-col>
+</ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-content>
+    <div class="title ion-padding">
+        <h4 class="font-bold">Categories</h4>
+        <p>See all</p>
+      </div>
+
+      <div class="category-list">
+          <ion-list>
+              <ion-item *ngFor="let category of categories">
+                <ion-row>
+                <h4>{{ category.name }}</h4>
+                <img src="{{ category.image }}" />
+                </ion-row>
+              </ion-item>
+          </ion-list>
+      </div>
+</ion-content>

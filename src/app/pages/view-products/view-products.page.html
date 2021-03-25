@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-button fill="clear" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-button>
+    <ion-buttons fill="clear" slot="end">
+      <ion-back-button defaultHref="/menu/first/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Shop Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Search Product" (ionChange)="search($event)" animated mode="ios">
+  </ion-searchbar>
+  <ion-grid>
+    <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="6" *ngFor="let item of images | async">
+      <ion-card class="ion-card">
+      <img src="{{ item.filepath }}" class="ion-img" />
+    
+      <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center; color:#f17e7e ; font-weight: bold; margin-bottom: 0px;" >{{ item.Brand_name }}</p>
+      <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center;  margin-top: 0px; margin-bottom: 0px;">{{ item.Sub_Category }} {{ item.Category }}</p>
+      <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center; font-weight: bold; margin-top: 0px; margin-top: 0px; margin-bottom: 0px;">₹ {{ item.Price }}</p>
+    
+    </ion-card>
+  </ion-col>
+</ion-row>
+  </ion-grid>
+  
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "menuTabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

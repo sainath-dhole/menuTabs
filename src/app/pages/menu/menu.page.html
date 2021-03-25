@@ -1,0 +1,26 @@
+<ion-split-pane contentId="content">
+  <ion-menu contentId="content" type="overlay">
+    <ion-header>
+      <ion-toolbar color="medium">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content >
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item color="medium" [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
+            <ion-lebel>
+              {{p.title}}
+            </ion-lebel>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-item color="medium" tappable routerLink="/login" routerDirection="root">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>
